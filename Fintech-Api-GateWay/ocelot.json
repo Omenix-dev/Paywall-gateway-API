@@ -233,7 +233,7 @@
       "SwaggerKey": "user"
     },
     {
-      "UpstreamPathTemplate": "/gateway/auth/confirm-emai",
+      "UpstreamPathTemplate": "/gateway/auth/confirm-email",
       "UpstreamHttpMethod": [ "Get" ],
       "DownstreamPathTemplate": "/api/v1/Auth/confirm-email",
       "DownstreamScheme": "https",
