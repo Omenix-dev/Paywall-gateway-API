@@ -345,7 +345,7 @@
         {
           "Name": "User Service API",
           "Version": "v1",
-          "Url": "/http://localhost:7224/swagger/FintechOpenAPI/swagger.json"
+          "Url": "http://localhost:7224/swagger/FintechOpenAPI/swagger.json"
         }
       ]
     },
