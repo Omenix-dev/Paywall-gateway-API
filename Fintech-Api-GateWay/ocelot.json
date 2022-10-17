@@ -1,0 +1,373 @@
+{
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:7174"
+  },
+  "Routes": [
+    // Payment Services 
+    // Bank account endpoints
+    {
+      "UpstreamPathTemplate": "/gateway/accounts/add-beneficiary/{walletId}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/BankAccounts/add-beneficiary/{walletId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/accounts/beneficiary-list/{walletId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/BankAccounts/beneficiary-list/{walletId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/accounts/delete-beneficiary/{walletId}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamPathTemplate": "/api/BankAccounts/delete-beneficiary/{walletId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/accounts/verify-account-number",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/BankAccounts/verify-account-number",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    //Bank
+    {
+      "UpstreamPathTemplate": "/gateway/bank",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Banks/get-all-banks",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/info",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/info",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    // Transactions
+    {
+      "UpstreamPathTemplate": "/gateway/transaction/history",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Transactions/transaction-history",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    // Wallets
+    {
+      "UpstreamPathTemplate": "/gateway/wallets/{Id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/Wallets/{Id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/wallets",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Wallets/create-wallet",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/wallets/initialize-fund-wallet/{walletId}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Wallets/initialize-fund-wallet/{walletId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/wallets/verification/{walletId}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Wallets/fund-wallet-verification/{walletId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/wallets/bank-transfer/{walletId}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Wallets/bank-transfer/{walletId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/wallets/local-transfer/{walletId}",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/Wallets/local-transfer/{walletId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7225
+        }
+      ]
+    },
+    //Notification Services
+    {
+      "UpstreamPathTemplate": "/gateway/notification/send-email",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/Notification/send-email",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7037
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/notification/notice",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/Notification/public-notification",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7037
+        }
+      ]
+    },
+    // User Services
+    //Auth
+    {
+      "UpstreamPathTemplate": "/gateway/auth/register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/resend-otp",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/resend-otp",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/confirm-emai",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/confirm-email",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/login",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/google",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/google",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/forget-password",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/forget-password",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/reset-password",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/reset-password",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/changed-password",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/change-password",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/auth/refresh-token",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/Auth/refresh-token",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    // User
+    {
+      "UpstreamPathTemplate": "/gateway/user",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/User",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/user/{Id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamPathTemplate": "/api/v1/User/get-user/{Id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/user/upload-image",
+      "UpstreamHttpMethod": [ "Patch" ],
+      "DownstreamPathTemplate": "/api/v1/User/upload-image",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7224
+        }
+      ]
+    }
+  ],
+  // Swagger Endpoint
+  "SwaggerEndPoints": [
+    {
+      "Key": "user",
+      "Config": [
+        {
+          "Name": "User Service API",
+          "Version": "v1",
+          "Url": "/http://localhost:7224/swagger/FintechOpenAPI/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "payment",
+      "Config": [
+        {
+          "Name": "Payment Service API",
+          "Version": "v1",
+          "Url": "http://localhost:7225/swagger/v1/swagger.json"
+        }
+      ]
+    },
+    {
+      "Key": "notification",
+      "Config": [
+        {
+          "Name": "Notification Service API",
+          "Version": "v1",
+          "Url": "http://localhost:7037/swagger/v1/swagger.json"
+        }
+      ]
+    }
+  ]
+}
