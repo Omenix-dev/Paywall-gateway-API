@@ -15,7 +15,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/accounts/beneficiary-list/{walletId}",
@@ -27,7 +28,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/accounts/delete-beneficiary/{walletId}",
@@ -39,7 +41,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/accounts/verify-account-number",
@@ -51,7 +54,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     //Bank
     {
@@ -64,7 +68,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/info",
@@ -76,7 +81,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     // Transactions
     {
@@ -89,7 +95,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     // Wallets
     {
@@ -102,7 +109,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/wallets",
@@ -114,7 +122,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/wallets/initialize-fund-wallet/{walletId}",
@@ -126,7 +135,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/wallets/verification/{walletId}",
@@ -138,7 +148,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/wallets/bank-transfer/{walletId}",
@@ -150,7 +161,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     {
       "UpstreamPathTemplate": "/gateway/wallets/local-transfer/{walletId}",
@@ -162,7 +174,8 @@
           "Host": "localhost",
           "Port": 7225
         }
-      ]
+      ],
+      "SwaggerKey": "payment"
     },
     //Notification Services
     {
@@ -175,7 +188,8 @@
           "Host": "localhost",
           "Port": 7037
         }
-      ]
+      ],
+      "SwaggerKey": "notification"
     },
     {
       "UpstreamPathTemplate": "/gateway/notification/notice",
@@ -187,7 +201,8 @@
           "Host": "localhost",
           "Port": 7037
         }
-      ]
+      ],
+      "SwaggerKey": "notification"
     },
     // User Services
     //Auth
@@ -201,7 +216,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/resend-otp",
@@ -213,7 +229,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/confirm-emai",
@@ -225,7 +242,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/login",
@@ -237,7 +255,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/google",
@@ -249,7 +268,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/forget-password",
@@ -261,7 +281,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/reset-password",
@@ -273,7 +294,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/changed-password",
@@ -285,7 +307,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/auth/refresh-token",
@@ -297,7 +320,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     // User
     {
@@ -310,7 +334,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/user/{Id}",
@@ -322,7 +347,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     },
     {
       "UpstreamPathTemplate": "/gateway/user/upload-image",
@@ -334,7 +360,8 @@
           "Host": "localhost",
           "Port": 7224
         }
-      ]
+      ],
+      "SwaggerKey": "user"
     }
   ],
   // Swagger Endpoint
@@ -345,7 +372,7 @@
         {
           "Name": "User Service API",
           "Version": "v1",
-          "Url": "http://localhost:7224/swagger/FintechOpenAPI/swagger.json"
+          "Url": "https://localhost:7224/swagger/FintechOpenAPI/swagger.json"
         }
       ]
     },
@@ -355,7 +382,7 @@
         {
           "Name": "Payment Service API",
           "Version": "v1",
-          "Url": "http://localhost:7225/swagger/v1/swagger.json"
+          "Url": "https://localhost:7225/swagger/v1/swagger.json"
         }
       ]
     },
@@ -365,7 +392,7 @@
         {
           "Name": "Notification Service API",
           "Version": "v1",
-          "Url": "http://localhost:7037/swagger/v1/swagger.json"
+          "Url": "https://localhost:7037/swagger/v1/swagger.json"
         }
       ]
     }
