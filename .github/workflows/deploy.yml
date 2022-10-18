@@ -7,8 +7,8 @@ jobs:
   build_for_heroku:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
     - name: Build and deploy the Docker image
+      uses: actions/checkout@v3
       working-directory: ./Fintech-Api-GateWay/Dockerfile
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_KEY }}
