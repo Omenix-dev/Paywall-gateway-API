@@ -9,7 +9,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and deploy the Docker image
-      working-directory: ../Fintech-Api-GateWay/Dockerfile/
+      working-directory: Dockerfile/
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_KEY }}
         APP_NAME: ${{secrets.HEROKU_APP_NAME}}
