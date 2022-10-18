@@ -9,13 +9,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and deploy the Docker image
-      working-directory: ./Fintech-Api-GateWay/
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_KEY }}
         APP_NAME: ${{secrets.HEROKU_APP_NAME}}
       run: |
         docker build -t notify .
         docker tag notify registry.heroku.com/$APP_NAME/web
-        docker login --username=_ --password=$HEROKU_API_KEY registry.heroku.com
+        docker login --username=_ --password=${{ secrets.HEROKU_KEY }} registry.heroku.com
         heroku container:push web -a $APP_NAME
         heroku container:release web -a $APP_NAME
