@@ -19,4 +19,5 @@ RUN dotnet publish "Fintech-Api-GateWay.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY --from=publish /src/Fintech-Api-GateWay/ocelot.json ./
 ENTRYPOINT ["dotnet", "Fintech-Api-GateWay.dll"]
