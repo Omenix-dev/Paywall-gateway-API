@@ -6,13 +6,13 @@ on:
 jobs:
   build_for_heroku:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Fintech-Api-GateWay
     steps:
     - uses: actions/checkout@v2
     - name: Build and deploy the Docker image
-      run: |
-        cd ..
-      working-directory: ./Fintech-Api-GateWay/Dockerfile
-    - name: Test
+      working-directory: Dockerfile
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_KEY }}
         APP_NAME: ${{secrets.HEROKU_APP_NAME}}
