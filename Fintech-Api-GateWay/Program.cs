@@ -23,11 +23,12 @@ builder.Services.AddEndpointsApiExplorer();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsProduction())
 {
-    //app.UseSwagger();
-    //app.UseSwaggerUI();
+    var port = Environment.GetEnvironmentVariable("PORT");
+    app.Urls.Add($"http://*:{port}");
 }
+
 app.UseCors("AllowAll");
 
 app.UseHttpsRedirection();
