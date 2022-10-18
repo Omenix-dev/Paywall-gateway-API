@@ -8,11 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-      with:
-        ref: main
-        path: main
     - name: Build and deploy the Docker image
+      run: |
+        cd ..
       working-directory: ./Fintech-Api-GateWay/Dockerfile
+    - name: Test
       env: 
         HEROKU_API_KEY: ${{ secrets.HEROKU_KEY }}
         APP_NAME: ${{secrets.HEROKU_APP_NAME}}
